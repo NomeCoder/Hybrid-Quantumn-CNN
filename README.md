@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/27792441/README.md)
 <div align="center">
 
 # 🔬 HQ-CNN
@@ -52,6 +51,12 @@ The model maps spatial features to a 16-dimensional latent space (analogous to 1
 | **800** | **98.00%** | **97.67%** | **−0.33 (Quantum)** ✅ |
 
 > **Insight:** The quantum embedding requires more data to unlock its advantage — but once sufficient samples are available (≥800), it matches and surpasses the classical baseline.
+
+<div align="center">
+<img src="data_efficiency.png" alt="Data Efficiency: HQ-CNN vs Classical CNN" width="80%"/>
+
+*Fig. 1 — Test accuracy vs. training dataset size. The quantum model catches up to and overtakes the classical baseline at ≥800 samples.*
+</div>
 
 ---
 
@@ -281,6 +286,18 @@ The sinusoidal embedding is motivated by the **Fourier decomposition of quantum 
 - **Final (Epoch 15):** Test accuracy = **99.67%** (299/300 correct)
 
 The sole misclassification was a digit `5` predicted as `9`.
+
+<div align="center">
+<img src="training_curves.png" alt="Training and Validation Accuracy Curves" width="70%"/>
+
+*Fig. 2 — Training and validation accuracy over 15 epochs. Validation stabilizes above 99% after epoch 9.*
+</div>
+
+<div align="center">
+<img src="confusion_matrix.png" alt="Confusion Matrix — 99.67% Accuracy" width="55%"/>
+
+*Fig. 3 — Confusion matrix for the final HQ-CNN model. Near-perfect diagonal confirms accurate per-class predictions across all 10 digit classes.*
+</div>
 
 ---
 
